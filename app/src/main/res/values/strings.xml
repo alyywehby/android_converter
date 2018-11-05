@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">converterMobApp</string>
+    <string-array name="DataTransferRate">
+        <item>-</item>
+        <item>kbit/s</item>
+        <item>kB/s</item>
+        <item>Mbit/s</item>
+        <item>MB/s</item>
+        <item>Gbit/s</item>
+        <item>GB/s</item>
+    </string-array>
 </resources>

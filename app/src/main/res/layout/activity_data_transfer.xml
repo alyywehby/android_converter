@@ -6,51 +6,144 @@
     android:layout_height="match_parent"
     tools:context=".DataTransferActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <Spinner
+            <TextView
+                android:id="@+id/TVtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:text="Data Transfer Unit Converter Calculator"
+                android:textAlignment="center"
+                android:textColor="#646464"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TVfrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Convert From"
+                android:textColor="#646464"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/SPfrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:focusedByDefault="true"
+                android:entries="@array/DataTransferRate">
 
             </Spinner>
 
-            <Spinner
+            <TextView
+                android:id="@+id/TVvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Enter a value"
+                android:textColor="#646464"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ETvalue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="15dp"
+                android:inputType="number"
+                android:text="0"/>
+
+            <TextView
+                android:id="@+id/TVto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Convert To"
+                android:textColor="#646464"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/SPto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:entries="@array/DataTransferRate">
 
             </Spinner>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-            <EditText
+                <Button
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Calculate" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:id="@+id/TVresult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Result"
+                    android:layout_weight="1"
+                    android:textAlignment="center"/>
+                <EditText
+                    android:id="@+id/ETresult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0.0"
+                    android:inputType="none"
+                    android:enabled="false"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
