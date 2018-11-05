@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">converterMobApp</string>
+    <string name="app_name">Units Converter</string>
     <string-array name="DataTransferRate">
         <item>-</item>
         <item>kbit/s</item>

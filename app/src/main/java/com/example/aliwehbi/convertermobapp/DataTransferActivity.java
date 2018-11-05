@@ -87,7 +87,116 @@ public class DataTransferActivity extends AppCompatActivity {
                         result.setText(num2 + " GB/s");
                     }
                 }
-
+                else if(from==2){
+                    if(to==1){
+                        num2 = num1*8;
+                        result.setText(num2 + " kbit/s");
+                    }
+                    else if(to==3){
+                        num2 = num1*0.008;
+                        result.setText(num2 + " Mbit/s");
+                    }
+                    else if(to==4){
+                        num2 = num1*0.001;
+                        result.setText(num2 + " MB/s");
+                    }
+                    else if(to==5){
+                        num2 = num1*8e-6;
+                        result.setText(num2 + " Gbit/s");
+                    }
+                    else if(to==6){
+                        num2 = num1*1e-6;
+                        result.setText(num2 + " GB/s");
+                    }
+                }
+                else if(from==3){
+                    if(to==1){
+                        num2 = num1*1000;
+                        result.setText(num2 + " kbit/s");
+                    }
+                    else if(to==2){
+                        num2 = num1*125;
+                        result.setText(num2 + " KB/s");
+                    }
+                    else if(to==4){
+                        num2 = num1*0.125;
+                        result.setText(num2 + " MB/s");
+                    }
+                    else if(to==5){
+                        num2 = num1*0.001;
+                        result.setText(num2 + " Gbit/s");
+                    }
+                    else if(to==6){
+                        num2 = num1*0.000125;
+                        result.setText(num2 + " GB/s");
+                    }
+                }
+                else if(from==4){
+                    if(to==1){
+                        num2 = num1*8000;
+                        result.setText(num2 + " kbit/s");
+                    }
+                    else if(to==2){
+                        num2 = num1*1000;
+                        result.setText(num2 + " KB/s");
+                    }
+                    else if(to==3){
+                        num2 = num1*8;
+                        result.setText(num2 + " Mbit/s");
+                    }
+                    else if(to==5){
+                        num2 = num1*0.008;
+                        result.setText(num2 + " Gbit/s");
+                    }
+                    else if(to==6){
+                        num2 = num1*0.001;
+                        result.setText(num2 + " GB/s");
+                    }
+                }
+                else if(from==5){
+                    if(to==1){
+                        num2 = num1*1e+6;
+                        result.setText(num2 + " kbit/s");
+                    }
+                    else if(to==2){
+                        num2 = num1*125000;
+                        result.setText(num2 + " KB/s");
+                    }
+                    else if(to==3){
+                        num2 = num1*1000;
+                        result.setText(num2 + " Mbit/s");
+                    }
+                    else if(to==4){
+                        num2 = num1*125;
+                        result.setText(num2 + " MB/s");
+                    }
+                    else if(to==6){
+                        num2 = num1*0.125;
+                        result.setText(num2 + " GB/s");
+                    }
+                }
+                else if(from==6){
+                    if(to==1){
+                        num2 = num1*8e+6;
+                        result.setText(num2 + " kbit/s");
+                    }
+                    else if(to==2){
+                        num2 = num1*1e+6;
+                        result.setText(num2 + " KB/s");
+                    }
+                    else if(to==3){
+                        num2 = num1*8000;
+                        result.setText(num2 + " Mbit/s");
+                    }
+                    else if(to==4){
+                        num2 = num1*1000;
+                        result.setText(num2 + " MB/s");
+                    }
+                    else if(to==5){
+                        num2 = num1*8;
+                        result.setText(num2 + " Gbit/s");
+                    }
+                }
             }
         });
 

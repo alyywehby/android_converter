@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DataTransferActivity">
+    tools:context=".DataTransferActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -27,7 +30,7 @@
                 android:id="@+id/TVtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Data Transfer Unit Converter Calculator"
+                android:text="Data Transfer Unit Converter"
                 android:textAlignment="center"
                 android:textColor="#646464"
                 android:textSize="20dp"
@@ -75,8 +78,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:textSize="15dp"
-                android:inputType="number"
-                android:text="0"/>
+                android:inputType="number"/>
 
             <TextView
                 android:id="@+id/TVto"
@@ -96,6 +98,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
                 android:entries="@array/DataTransferRate">
 
             </Spinner>
@@ -110,8 +113,6 @@
                     android:id="@+id/btnCalculate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
                     android:text="Calculate" />
 
             </LinearLayout>
@@ -128,8 +129,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Result"
+                    android:textSize="20dp"
                     android:layout_weight="1"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center"
+                    android:textColor="#646464"
+                    android:textStyle="bold"/>
+
                 <EditText
                     android:id="@+id/ETresult"
                     android:layout_width="wrap_content"
@@ -137,7 +142,8 @@
                     android:layout_weight="1"
                     android:hint="0.0"
                     android:inputType="none"
-                    android:enabled="false"/>
+                    android:enabled="false"
+                    android:textColor="#ff0000"/>
 
             </LinearLayout>
 
