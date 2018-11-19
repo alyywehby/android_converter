@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -31,6 +32,11 @@ public class DataTransferActivity extends AppCompatActivity {
         btnCalculate = (Button)findViewById(R.id.btnCalculate);
         spfrom = (Spinner)findViewById(R.id.SPfrom);
         spto = (Spinner)findViewById(R.id.SPto);
+
+//        String[] items = {"-", "Yellow", "Black", "White", "Jibbe"};
+//        ArrayAdapter<String> a1 = new ArrayAdapter<String>(this,R.layout.spinner, R.id.spTV, items);
+//        spfrom.setAdapter(a1);
+
 
         spfrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

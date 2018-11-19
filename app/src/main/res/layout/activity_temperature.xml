@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DataTransferActivity"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:background="@drawable/data">
+    tools:context=".Temperature"
+    android:background="@drawable/temp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,7 +29,7 @@
                 android:id="@+id/TVtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Data Transfer Unit Converter"
+                android:text="Temperature Unit Converter"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="20dp"
@@ -55,7 +53,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:entries="@array/DataTransferRate">
+                android:entries="@array/Temperature">
 
             </Spinner>
 
@@ -99,7 +97,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
-                android:entries="@array/DataTransferRate">
+                android:entries="@array/Temperature">
 
             </Spinner>
 
